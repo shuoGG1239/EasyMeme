@@ -1,18 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'landing-page',
-      component: require('@/components/LandingPage').default
-    },
-    {
-      path: '*',
-      redirect: '/'
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'applayout',
+            component: require('@/components/layouts/AppLayout').default,
+            children: [
+                {
+                    path: 'memecreate',
+                    component: require('@/components/pages/MemeCreate').default,
+                    name: 'memecreate'
+                },
+                {
+                    path: 'greener',
+                    component: require('@/components/pages/Greener').default,
+                    name: 'greener'
+                },
+            ]
+        }
+    ]
 })

@@ -53,7 +53,8 @@
   "dependencies": {
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "element-ui": "^2.13.0"
   },
   "devDependencies": {
     "ajv": "^6.5.0",
